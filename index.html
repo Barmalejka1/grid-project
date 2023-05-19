@@ -10,111 +10,98 @@
 
   <body>
     <div class="wrapper">
-      <header class="header">
-        <a class="header__logo" href="#"></a>
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li>
-              <a href="" class="header__link">пункт меню</a>
-            </li>
-            <li>
-              <a href="" class="header__link">пункт меню</a>
-            </li>
-            <li>
-              <a href="" class="header__link">пункт меню</a>
-            </li>
-            <li>
-              <a href="" class="header__link">пункт меню</a>
-            </li>
-          </ul>
-          <div class="header__burger">
-            <span></span>
-          </div>
-        </nav>
-      </header>
-      <main class="main">
-        <aside class="sidebar">
-          <nav class="sidebar__menu">
-            <ul class="sidebar__list">
-              <li><a href="" class="sidebar__link">Пункт меню</a></li>
-              <li><a href="" class="sidebar__link">Пункт меню</a></li>
-              <li><a href="" class="sidebar__link">Пункт меню</a></li>
-              <li><a href="" class="sidebar__link">Пункт меню</a></li>
-            </ul>
-          </nav>
-        </aside>
-        <section class="content">
-          <h1 class="content__title">Grid layout - Practice</h1>
-          <section class="content__gallery gallery">
-            <h2 class="gallery__title">моя галлерея</h2>
-            <div class="gallery__item">
-              <img src="/image/photo1.jpg" alt="" />
+      <section class="form">
+        <div class="container">
+          <form action="#" class="form__body" id="form">
+            <h1 class="form__title title">Тестовая форма отправки данных</h1>
+            <div class="form__item">
+              <label for="formName" class="form__label">Name*</label>
+              <input
+                id="formName"
+                type="text"
+                name="name"
+                class="form__input"
+              />
             </div>
-            <div class="gallery__item">
-              <img src="/image/photo2.jpg" alt="" />
+            <div class="form__item">
+              <label for="formEmail" class="form__label">Email*</label>
+              <input
+                id="formEmail"
+                type="text"
+                name="Email"
+                class="form__input"
+              />
             </div>
-            <div class="gallery__item">
-              <img src="/image/photo3.jpg" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="/image/photo4.jpg" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="/image/photo5.jpg" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="/image/photo6.jpg" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="/image/photo7.jpg" alt="" />
-            </div>
-          </section>
-          <section class="content__products products">
-            <h2 class="products__title">Товары</h2>
-            <div class="products__items">
-              <div class="products__item">
-                <a href="#" class="products__image">
-                  <img src="/image/prod1.jpg" alt="#" />
-                </a>
-                <a href="#" class="products__button">BUY</a>
-              </div>
-              <div class="products__item">
-                <a href="#" class="products__image">
-                  <img src="/image/prod2.jpg" alt="#" />
-                </a>
-                <a href="#" class="products__button">BUY</a>
-              </div>
-              <div class="products__item">
-                <a href="#" class="products__image">
-                  <img src="/image/prod3.jpg" alt="#" />
-                </a>
-                <a href="#" class="products__button">BUY</a>
-              </div>
-              <div class="products__item">
-                <a href="#" class="products__image">
-                  <img src="/image/prod4.jpg" alt="#" />
-                </a>
-                <a href="#" class="products__button">BUY</a>
-              </div>
-              <div class="products__item">
-                <a href="#" class="products__image">
-                  <img src="/image/prod1.jpg" alt="#" />
-                </a>
-                <a href="#" class="products__button">BUY</a>
-              </div>
-              <div class="products__item">
-                <a href="#" class="products__image">
-                  <img src="/image/prod1.jpg" alt="#" />
-                </a>
-                <a href="#" class="products__button">BUY</a>
+            <div class="form__item">
+              <div class="form__title">Левша или правша</div>
+              <div class="options">
+                <div class="options__item">
+                  <input
+                    id="formRightHand"
+                    checked
+                    type="radio"
+                    value="right"
+                    name="hand"
+                    class="options__input"
+                  />
+                  <label class="option__label" for="formRightHand"
+                    >Правша</label
+                  >
+                </div>
+                <div class="options__item">
+                  <input
+                    id="formLeftHand"
+                    type="radio"
+                    value="left"
+                    name="hand"
+                    class="options__input"
+                  />
+                  <label class="option__label" for="formLeftHand">Левша</label>
+                </div>
               </div>
             </div>
-          </section>
-        </section>
-      </main>
-      <footer class="footer">
-        <div class="footer__copy">Copy, 2020</div>
-      </footer>
+            <div class="form__item">
+              <label class="form__label" for="formMessage">Сообщение:</label>
+              <textarea
+                name="message"
+                class="formInput"
+                id="formMessage"
+              ></textarea>
+            </div>
+            <div class="form__item">
+              <div class="form__label">Возраст:</div>
+              <select name="age" class="select">
+                <option value="от 16 до 23 лет">от 16 до 23 лет</option>
+                <option value="от 23 до 35">от 23 до 35</option>
+                <option value="от 35 до 45">от 35 до 45</option>
+              </select>
+            </div>
+            <div class="form__item">
+              <div class="form__label">Прикрепить фото</div>
+              <div class="file">
+                <div class="file__item">
+                  <input
+                    id="formImage"
+                    accept=".jpg"
+                    type="file"
+                    name="image"
+                    class="file__input"
+                  />
+                  <div class="file__button">Выбрать</div>
+                </div>
+                <div class="file__previev"></div>
+              </div>
+            </div>
+            <div class="form__item">
+              <div class="checkbox">
+                <input checked id="form__agreement"type="checkbox" name="agreement" class="checkbox__input">
+                <label for="form__agreement" class="form__label"> Я согласен с обработкой моих персональных данных Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Грамматики на берегу рекламных которой даль буквенных щеке что. Пустился, переписывается мир! Имени использовало ему вопроса, точках жизни наш курсивных толку!</label>
+              </div>
+            </div>
+            <button type="submit" class="form__button">Отправить форму</button>
+          </form>
+        </div>
+      </section>
     </div>
     <script src="/js/skript.js"></script>
   </body>
